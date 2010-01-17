@@ -1,5 +1,5 @@
 path=%PATH%;%CD%\bin
-set name="machine-toolchain-%username%"
+set name="MachineToolchain-%username%"
 mkdir "%name%"
 
 ::utils
