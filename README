@@ -1,0 +1,17 @@
+====== Reddit Makes A Game ======
+
+===== What is this? =====
+This Reddit community project called Reddit Makes A Game aims to produce a 
+story-driven, high quality single-player game. 
+
+In order to achieve this, the game is built separately from the engine.
+
+===== How do I check it out? =====
+You will need to build the engine in BaconGameEngine/ using make.
+It should then be possible to launch the game directly in MachineGame/ by
+issuing ./machine.py
+
+===== How do I help? =====
+For a project overview, see http://redditmakesagame.com
+If you want to help our, it is a good idea to send a mail to the mailing list 
+on Google Groups or drop by on IRC: #redditmakesagame on irc.freenode.org
