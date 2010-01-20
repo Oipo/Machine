@@ -3,12 +3,24 @@ import bacon
 # ALL you're allowed to do here is register prototypes.
 # this code runs in editor context as well as your game!
 
-# TODO: whatever you do, to register prototypes...
-
 class CoinPrototype(object):
-	img = "data/images/coin.png"
+	img = "coin"		# not paths anymore?
 
-bacon.Entity.Register(CoinPrototype)
+class CratePrototype(object):
+	img = "crate"
 
-	# if you don't set bounds explicitly, it uses the bounds from `img` ?
-	# yes it should figure out those, I don't see a problem there
+class BarrelPrototype(object):
+	img = "barrel"
+
+class ShotgunPrototype(object):
+	img = "shotgun"
+
+class EnemyPrototype(object):
+	img = "enemy"
+
+def registerPrototypes:
+	bacon.RegisterPrototype("coin", CoinPrototype)
+	bacon.RegisterPrototype("crate", CratePrototype)
+	bacon.RegisterPrototype("barrel", BarrelPrototype)
+	bacon.RegisterPrototype("shotgun", ShotgunPrototype)
+	bacon.RegisterPrototype("enemy", EnemyPrototype)
