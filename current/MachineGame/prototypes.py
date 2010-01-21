@@ -4,7 +4,7 @@ import bacon
 # this code runs in editor context as well as your game!
 
 class CoinPrototype(object):
-	img = "coin"		# not paths anymore?
+	img = "coin"
 
 class CratePrototype(object):
 	img = "crate"
