@@ -1,15 +1,27 @@
-#include <boost/python.hpp>
-
 #include <string>
 #include <map>
+#include <vector>
 #include <cassert>
 
+#include <boost/python.hpp>
+#include <SFML/Window.hpp>
+
 #include "bacon.hpp"
+
+sf::Window * appWindow;
+typedef std::vector< ITask * > task_list;
+task_list tasks;
 
 void StartEngine()
 {
 	// do all our core startup tasks
-	assert( !"NOTI" );
+	// we should go to our initial appstate here.
+
+	// todo: res from host? or from config?
+	// debug-friendly :S
+	appWindow = new sf::Window( 
+		sf::VideoMode(800,600,32),
+		"Bacon Game Engine" );
 }
 
 static bool running = false;
@@ -19,6 +31,14 @@ void Run()
 	while (running)
 	{
 		assert( !"NOTI" );
+
+		// tick each of our active tasks
+		// note that we want the active appstate's tasks,
+		// not a fixed list!
+		task_list::iterator it;
+		for( it = tasks.begin(); it != tasks.end(); it++ )
+			(*it)->Tick();
+			
 
 		// call some python code; tick the physics; render the frame
 	}

@@ -1,9 +1,11 @@
 import bacon
+import appstates
 import prototypes
 
+engine = bacon.bacon()
 # start up the bugger
-bacon.StartEngine()
-prototypes.registerPrototypes()
+engine.StartEngine()
+engine.registerPrototypes()
 
 # initialize some new components for entities to use
 # i have no idea if we want the engine to know about this

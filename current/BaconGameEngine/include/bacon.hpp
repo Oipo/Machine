@@ -19,6 +19,10 @@ public:
 	virtual void OnTick() = 0; 
 };
 
+/* well-known tasks */
+ITask * CreateVideoTask();
+ITask * CreateInputTask();
+
 class Entity
 {
 	boost::python::object pythonObject;	// ref?
