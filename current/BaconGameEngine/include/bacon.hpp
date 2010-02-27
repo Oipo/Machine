@@ -4,19 +4,20 @@
 void StartEngine();
 void Run();
 void Shutdown();
-void RegisterPrototype( std::string const & type, 
+void RegisterPrototype( std::string const & type,
 			boost::python::object prototype );
 boost::python::object Spawn( std::string const & type, int x, int y );
 
-// Introduce `interface` as a synonym for `class`, to be used when defining 
+// Introduce `interface` as a synonym for `class`, to be used when defining
 // pure virtual bases.
 #define interface class
 
-interface ITask 
-{ 
+interface ITask
+{
 public:
-	virtual ~ITask() = 0; 
-	virtual void OnTick() = 0; 
+	virtual ~ITask() = 0;
+	virtual void OnTick() = 0;
+	virtual void Tick() = 0;
 };
 
 /* well-known tasks */

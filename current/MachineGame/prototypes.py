@@ -18,7 +18,7 @@ class ShotgunPrototype(object):
 class EnemyPrototype(object):
 	img = "enemy"
 
-def registerPrototypes:
+def registerPrototypes():
 	bacon.RegisterPrototype("coin", CoinPrototype)
 	bacon.RegisterPrototype("crate", CratePrototype)
 	bacon.RegisterPrototype("barrel", BarrelPrototype)
