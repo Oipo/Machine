@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1267296828 source:/home/oipo/Programming/machine/current/BaconGameEngine/src/boost.cpp
+1267299755 source:/home/oipo/Programming/machine/current/BaconGameEngine/src/boost.cpp
 	<string>
 	<boost/python.hpp>
 	"bacon.hpp"
 
-1267297168 /home/oipo/Programming/machine/current/BaconGameEngine/include/bacon.hpp
+1267299668 /home/oipo/Programming/machine/current/BaconGameEngine/include/bacon.hpp
 
 1267296828 source:/home/oipo/Programming/machine/current/BaconGameEngine/src/main.cpp
 	<string>
@@ -27,4 +27,13 @@
 	"resources.hpp"
 
 1267296828 /home/oipo/Programming/machine/current/BaconGameEngine/include/resources.hpp
+
+1267299515 source:/home/oipo/Programming/machine/current/BaconGameEngine/src/bacon.cpp
+	<string>
+	<map>
+	<vector>
+	<cassert>
+	<boost/python.hpp>
+	<SFML/Window.hpp>
+	"bacon.hpp"
 

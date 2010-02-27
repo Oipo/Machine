@@ -11,26 +11,40 @@
 sf::Window * appWindow;
 typedef std::vector< ITask * > task_list;
 task_list tasks;
+static bool running = false;
+typedef std::map<std::string, boost::python::object> typemap;
+typemap prototypes;
 
-void StartEngine()
+Bacon::Bacon()
+{
+
+}
+
+void Bacon::StartEngine()
 {
 	// do all our core startup tasks
 	// we should go to our initial appstate here.
 
 	// todo: res from host? or from config?
 	// debug-friendly :S
-	appWindow = new sf::Window( 
+	appWindow = new sf::Window(
 		sf::VideoMode(800,600,32),
 		"Bacon Game Engine" );
 }
 
-static bool running = false;
-void Run()
+void Bacon::Run()
 {
 	running = true;
 	while (running)
 	{
-		assert( !"NOTI" );
+		//assert( !"NOTI" ); //What is this tomfoolery? Seriously. What is this?
+
+		sf::Event Event;
+        while(appWindow->GetEvent(Event))
+        {
+            if (Event.Type == sf::Event::Closed)
+                Shutdown();
+        }
 
 		// tick each of our active tasks
 		// note that we want the active appstate's tasks,
@@ -38,37 +52,36 @@ void Run()
 		task_list::iterator it;
 		for( it = tasks.begin(); it != tasks.end(); it++ )
 			(*it)->Tick();
-			
+
 
 		// call some python code; tick the physics; render the frame
+
+		appWindow->Display();
 	}
 }
 
 // called by python code at any time, to kill the main loop.
-void Shutdown()
+void Bacon::Shutdown()
 {
 	running = false;
 }
 
-typedef std::map<std::string, boost::python::object> typemap;
-typemap prototypes;
-
-void RegisterPrototype( std::string const & type, 
-			boost::python::object prototype )
+void Bacon::RegisterPrototype(  std::string const & type,
+			                    boost::python::object prototype )
 {
 	typemap::const_iterator it = prototypes.find(type);
-	assert( (it == prototypes.end()) && "Already registered" );
-	
+	assert( (it == prototypes.end()) /*&& "Already registered"*/ );
+
 	prototypes[ type ] = prototype;
 
 	// if the prototype mentions art assets, we probably
 	// want to smartly precache them now.
 }
 
-boost::python::object Spawn( std::string const & type, int x, int y )
+boost::python::object Bacon::Spawn( std::string const & type, int x, int y )
 {
 	typemap::const_iterator it = prototypes.find(type);
-	assert( (it != prototypes.end()) && "Not registered!" );
+	assert( (it != prototypes.end()) /*&& "Not registered!"*/ );
 
 	// clone the prototype
 	// inject into the world

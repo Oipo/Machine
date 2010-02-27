@@ -5,9 +5,11 @@
 BOOST_PYTHON_MODULE(bacon)
 {
 	using namespace boost::python;
-	def("StartEngine", StartEngine);
-	def("Run", Run);
-	def("Shutdown", Shutdown);
-	def("RegisterPrototype", RegisterPrototype);
-	def("Spawn", Spawn);
+	class_<Bacon>("bacon")
+        .def("StartEngine", &Bacon::StartEngine)
+        .def("Run", &Bacon::Run)
+        .def("Shutdown", &Bacon::Shutdown)
+        .def("RegisterPrototype", &Bacon::RegisterPrototype)
+        .def("Spawn", &Bacon::Spawn)
+        ;
 };
