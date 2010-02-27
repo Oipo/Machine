@@ -1,0 +1,15 @@
+http://sourceforge.net/projects/mingw/files/GNU%20Binutils/binutils-2.20/binutils-2.20-1-mingw32-bin.tar.gz/download
+http://sourceforge.net/projects/mingw/files/MinGW%20Runtime/mingwrt-3.17-mingw32-dev.tar.gz/download
+http://sourceforge.net/projects/mingw/files/MinGW%20Runtime/mingwrt-3.17-mingw32-dll.tar.gz/download
+http://sourceforge.net/projects/mingw/files/MinGW%20API%20for%20MS-Windows/w32api-3.14/w32api-3.14-mingw32-dev.tar.gz/download
+http://sourceforge.net/projects/mingw/files/GCC%20Version%204/gmp-4.2.4-mingw32-dll.tar.gz/download
+http://sourceforge.net/projects/mingw/files/MinGW%20libiconv/libiconv-1.13.1-1-mingw32-dll-2.tar.lzma/download
+http://sourceforge.net/projects/mingw/files/GCC%20Version%204/mpfr-2.4.1-mingw32-dll.tar.gz/download
+http://sourceforge.net/projects/mingw/files/GCC%20Version%204/pthreads-w32-2.8.0-mingw32-dll.tar.gz/download
+http://sourceforge.net/projects/mingw/files/GCC%20Version%204/gcc-core-4.4.0-mingw32-bin.tar.gz/download
+http://sourceforge.net/projects/mingw/files/GCC%20Version%204/gcc-core-4.4.0-mingw32-dll.tar.gz/download
+http://sourceforge.net/projects/mingw/files/GCC%20Version%204/gcc-c%2B%2B-4.4.0-mingw32-bin.tar.gz/download
+http://sourceforge.net/projects/mingw/files/GCC%20Version%204/gcc-c%2B%2B-4.4.0-mingw32-dll.tar.gz/download
+http://sourceforge.net/projects/mingw/files/GNU%20Source-Level%20Debugger/GDB-7.0/gdb-7.0-2-mingw32-bin.tar.gz/download
+http://sourceforge.net/projects/mingw/files/MinGW%20make/make-3.81-20090914-mingw32/make-3.81-20090914-mingw32-bin.tar.gz/download
+http://sourceforge.net/projects/mingw/files/MinGW%20Utilities/mingw-utils/mingw-utils-0.4-1/mingw-utils-0.4-1-mingw32-bin.tar.lzma/download
